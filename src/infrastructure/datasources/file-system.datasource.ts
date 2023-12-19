@@ -2,8 +2,6 @@ import fs from "fs";
 
 import { LogDataSource } from "../../domain/datasources/log.datasource";
 import { LogEntity, LogSeverityLevel } from "../../domain/entities/log.entity";
-import path from "path";
-import { log } from "console";
 
 export class FileSystemDatasource implements LogDataSource {
   private readonly logPath = "logs/";
@@ -12,7 +10,7 @@ export class FileSystemDatasource implements LogDataSource {
   private readonly highLogsPath = "logs/logs-high.log";
 
   constructor() {
-    this.createLogsFiles;
+    this.createLogsFiles();
   }
 
   private createLogsFiles = () => {
