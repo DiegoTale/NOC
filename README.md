@@ -14,4 +14,8 @@ MAILER_SECRET_KEY=
 PROD=false
 ```
 3. Ejecutar el comando ```npm install```
-4. Ejecutar ```npm run dev```
+4. Levantar las bases de datos con el comando 
+```
+    docker compose up -d
+```
+6. Ejecutar ```npm run dev```
